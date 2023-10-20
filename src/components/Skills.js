@@ -10,12 +10,12 @@ import WOW from 'wowjs'
 function Skills() {
   return (
     <>
-        <div className="w-full py-48">
+        <div className="w-full pb-48">
             <p className='text-center text-5xl'>My Skills</p>
-            <div className="flex w-[1600px] mx-auto pt-[150px] basis-full justify-between">
-                <p className='text-[150px] basis-[15%]'>Oh</p>
-                <div className="flex justify-around basis-[82%]">
-                    <Swiper className='w-[1300px]'
+            <div className="flex w-11/12 mx-auto pt-[150px] justify-between">
+                <p className='text-[150px]'>Oh</p>
+                <div className="flex justify-around">
+                    <Swiper className='lg:w-[1300px] md:w-[800px]'
                         modules={[Autoplay, Navigation, Pagination]}
                         slidesPerView={7}
                         autoplay={{
@@ -35,16 +35,16 @@ function Skills() {
                         {
                             Array(14).fill().map((_, i) => {
                                 return (
-                                    <SwiperSlide key={i} className="overflow-hidden flex">
-                                        <img src={`./../../images/skill${i + 1}.png`} alt="" className='w-[130px] h-[100px]' />
-                                        <p className='w-[130px] h-[30px] bg-black mt-5 mb-14'></p>
+                                    <SwiperSlide key={i} className="overflow-hidden">
+                                        <img src={`./../../images/skill${i + 1}.png`} alt="" className='w-[130px] mx-auto h-[100px]' />
+                                        <p className='w-[130px] h-[30px] bg-black mt-5  mb-14 mx-auto'></p>
                                     </SwiperSlide>
                                 )
                             })
                         }
                     </Swiper>
                 </div>
-                <p className='basis-[3%] text-[150px]'>!</p>
+                <p className='text-[150px]'>!</p>
             </div>
         </div>
     </>

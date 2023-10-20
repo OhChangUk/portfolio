@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import Nav from '../components/Nav'
 import AboutMe from '../components/AboutMe'
 import Skills from '../components/Skills'
+import Project from '../components/Project'
 
 function Portfolio() {
   return (
@@ -11,6 +12,7 @@ function Portfolio() {
         <Header />
         <AboutMe />
         <Skills />
+        <Project />
     </>
   )
 }

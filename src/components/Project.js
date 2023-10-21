@@ -17,8 +17,8 @@ function Project() {
     ]
   return (
     <>
-        <div className="w-full pb-[200px]">
-            <p className='text-center text-[50px]'>My Project</p>
+        <div className="w-full pb-48">
+            <p className='text-center md:text-5xl text-3xl'>My Project</p>
             <div className="flex w-[1200px] mx-auto pt-[150px] basis-full justify-between">
                 {
                     Array(3).fill().map((_,i)=>{

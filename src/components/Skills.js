@@ -11,11 +11,11 @@ function Skills() {
   return (
     <>
         <div className="w-full pb-48">
-            <p className='text-center text-5xl'>My Skills</p>
-            <div className="flex w-11/12 mx-auto pt-[150px] justify-between">
-                <p className='text-[150px]'>Oh</p>
-                <div className="flex justify-around">
-                    <Swiper className='lg:w-[1300px] md:w-[800px]'
+            <p className='text-center md:text-5xl text-3xl'>My Skills</p>
+            <div className="flex max-w-7xl mx-auto lg:pt-[150px] md:pt-[130px] pt-20 justify-between px-[2%]">
+                <p className='lg:text-[150px] md:text-[100px] text-[70px]'>Oh</p>
+                <div className="flex w-[75%] justify-around">
+                    <Swiper className=''
                         modules={[Autoplay, Navigation, Pagination]}
                         slidesPerView={7}
                         autoplay={{
@@ -36,15 +36,15 @@ function Skills() {
                             Array(14).fill().map((_, i) => {
                                 return (
                                     <SwiperSlide key={i} className="overflow-hidden">
-                                        <img src={`./../../images/skill${i + 1}.png`} alt="" className='w-[130px] mx-auto h-[100px]' />
-                                        <p className='w-[130px] h-[30px] bg-black mt-5  mb-14 mx-auto'></p>
+                                        <img src={`./../../images/skill${i + 1}.png`} alt="" className='md:w-[90%] w-[80%] mx-auto lg:h-[35%] md:h-[70px] h-[45%] lg:mt-5' />
+                                        <p className='md:w-[90%] w-[80%] lg:h-7 md:h-5 h-3 bg-black lg:mt-5 md:mt-3 mt-3 mx-auto'></p>
                                     </SwiperSlide>
                                 )
                             })
                         }
                     </Swiper>
                 </div>
-                <p className='text-[150px]'>!</p>
+                <p className='lg:text-[150px] md:text-[100px] text-[70px]'>!</p>
             </div>
         </div>
     </>

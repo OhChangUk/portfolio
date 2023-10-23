@@ -13,11 +13,21 @@ function Skills() {
         <div className="w-full pb-48">
             <p className='text-center md:text-5xl text-3xl'>My Skills</p>
             <div className="flex max-w-7xl mx-auto lg:pt-[150px] md:pt-[130px] pt-20 justify-between px-[2%]">
-                <p className='lg:text-[150px] md:text-[100px] text-[70px]'>Oh</p>
+                <p className='lg:text-[130px] md:text-[100px] text-[60px]'>Oh</p>
                 <div className="flex w-[75%] justify-around">
                     <Swiper className=''
                         modules={[Autoplay, Navigation, Pagination]}
-                        slidesPerView={7}
+                        breakpoints={{
+                            1024:{
+                                slidesPerView:7
+                            },
+                            768:{
+                                slidesPerView:6
+                            },
+                            1:{
+                                slidesPerView:4
+                            }
+                        }}
                         autoplay={{
                             delay : 1000,
                             disableOnInteraction: false
@@ -44,7 +54,7 @@ function Skills() {
                         }
                     </Swiper>
                 </div>
-                <p className='lg:text-[150px] md:text-[100px] text-[70px]'>!</p>
+                <p className='lg:text-[130px] md:text-[100px] text-[60px]'>!</p>
             </div>
         </div>
     </>

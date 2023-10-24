@@ -46,7 +46,7 @@ function Nav() {
                         {
                             Array(3).fill().map((_,i)=>{
                                 return(
-                                    <li>{list[i]}</li>
+                                    <li key={i}>{list[i]}</li>
                                 )
                             })
                         }

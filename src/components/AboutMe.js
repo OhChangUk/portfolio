@@ -3,7 +3,7 @@ import React from 'react'
 function AboutMe() {
   return (
     <>
-        <div className="w-full py-48">
+        <div className="w-full pt-48 pb-24">
             <p className='text-center md:text-5xl text-3xl'>About Me</p>
             <div className="lg:flex md:flex max-w-7xl mx-auto lg:pt-[150px] md:pt-[130px] pt-20 justify-between px-[2%]">
                 <img src="./../../images/picture.jpg" alt="1" className='lg:w-[300px] md:w-[250px] w-full mx-auto lg:mr-[100px] md:mr-[50px]'/>

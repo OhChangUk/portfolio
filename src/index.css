@@ -12,23 +12,22 @@ ul, ol{list-style: none;}
 
 @keyframes bounceInRotate {
   0% {
-    transform: rotate(10deg) scale(1.0);
+    transform: scale(1.0);
     opacity: 0;
   }
   25% {
-    transform: rotate(10deg) scale(1.2);
+    transform: scale(1.2);
     opacity: 1;
   }
   50% {
-    transform: rotate(10deg) scale(1.0);
+    transform: scale(1.0);
     opacity: 1;
   }
   70% {
-    transform: rotate(10deg) scale(1.2);
+    transform: scale(1.2);
     opacity: 1;
   }
   100% {
-    transform: rotate(10deg);
     opacity: 1;
   }
 }

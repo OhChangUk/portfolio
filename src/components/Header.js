@@ -5,7 +5,7 @@ import 'animate.css'
 function Header() {
   return (
     <>
-        <img src="./../images/main.png" alt="" />
+        <img src="./../images/main.png" alt="main" />
     </>
   )
 }

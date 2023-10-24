@@ -20,9 +20,13 @@ function Nav() {
                     <p>Oh-! ChangUk</p>
                 </div>
                 <div className="w-[500px] justify-between hidden lg:flex">
-                    <p className='cursor-pointer'>About me</p>
-                    <p className='cursor-pointer'>My Skills</p>
-                    <p className='cursor-pointer'>My Project</p>
+                    {
+                        Array(3).fill().map((_,i)=>{
+                            return(
+                                <p key={i} className='cursor-pointer'>{list[i]}</p>
+                            )
+                        })
+                    }
                 </div>
                 
                 <div className="transition-all duration-1000 z-[100] cursor-pointer lg:hidden pr-5 flex" onClick={() => {toggleNav() }}>
@@ -41,7 +45,7 @@ function Nav() {
                         </div>
                     }
                 </div>
-                <div className={`w-full fixed bg-[#e5f0f6] top-[73px]  p-5 md:p-12 box-border lg:hidden ${nav ? 'block' : 'hidden'}`}>
+                <div className={`w-full fixed bg-[#e5f0f6] top-[73px]  p-5 md:p-12 box-border lg:hidden navlist ${nav ? 'block' : 'hidden'}`}>
                     <ul>
                         {
                             Array(3).fill().map((_,i)=>{

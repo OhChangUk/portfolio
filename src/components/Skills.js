@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import {Navigation, Autoplay, Pagination} from 'swiper/modules'
 import 'swiper/css'
@@ -8,6 +8,16 @@ import WOW from 'wowjs'
 
 
 function Skills() {
+    const [selectedImage, setSelectedImage] = useState(null);
+
+    const handleImageClick = (i) => {
+        if (selectedImage === i) {
+        setSelectedImage(null);
+        } else {
+        setSelectedImage(i);
+        }
+    }
+    const skill = ["HTML5", "CSS3", "JavaScript", "React", "Tailwind", "Github", "Figma", "Nodejs", "SCSS", "Styled-component", "MongoDB", "Firebase", "Notion", "Slack"]
   return (
     <>
         <div className="w-full py-24 bg-orange-50 overflow-hidden">
@@ -45,8 +55,13 @@ function Skills() {
                         {
                             Array(14).fill().map((_, i) => {
                                 return (
-                                    <SwiperSlide key={i} className="overflow-hidden w">
-                                        <img src={`./../../images/skill${i + 1}.png`} alt="" className='md:w-[90%] w-[70%] mx-auto lg:h-[35%] md:h-[70px] h-[45%] lg:mt-5' />
+                                    <SwiperSlide key={i} className="overflow-hidden relative">
+                                        <img src={`./../../images/skill${i + 1}.png`} alt="" className='md:w-[90%] w-[70%] mx-auto lg:h-[35%] md:h-[70px] h-[45%] lg:mt-5' onClick={() => handleImageClick(i)} />
+                                        {selectedImage === i && (
+                                            <div className='absolute -top-5  left-1/2 transform -translate-x-1/2 bg-black text-white'>
+                                            {skill[i]}
+                                            </div>
+                                        )}
                                         <p className='md:w-[90%] w-[70%] lg:h-7 md:h-5 h-[8px] bg-black lg:mt-5 md:mt-3 mt-[10%] mx-auto'></p>
                                     </SwiperSlide>
                                 )

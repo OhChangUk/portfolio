@@ -4,26 +4,47 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 
-function Nav() {
+function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef}) {
     const [nav, setNav] = useState(false)
 
     const toggleNav = () => {
         setNav(!nav)
     }
-    const list = ["About Me", "My Skills", "My Project"]
+    const list = [
+        {
+            "title" : "About Me",
+            "ref" : AboutRef,
+        },
+        {
+           "title" : "My Skills",
+           "ref" : SkillsRef,
+        }, 
+        {
+            "title" : "My Project",
+            "ref" : ProjectRef,
+        }
+    ]
+
+    
+    const NavClick = (ref) => {
+        scrollToComponent(ref)
+        setNav(false)
+    }
+
+    
     
   return (
     <>
-        <div className="w-full border-b border-black bg-white fixed z-40">
-            <div className="max-w-7xl mx-auto flex justify-between my-[20px] text-[20px]">
-                <div className="cursor-pointer pl-5 z-30">
-                    <p>Oh-! ChangUk</p>
+        <div className="w-full border-b border-black bg-white py-5 sticky top-0 z-40">
+            <div className="max-w-7xl mx-auto flex justify-between text-[20px]">
+                <div className="cursor-pointer pl-[2%] z-30">
+                    <p onClick={()=>window.scrollTo({top:0, behavior:'smooth'})}>Oh-! ChangUk</p>
                 </div>
-                <div className="w-[500px] justify-between hidden lg:flex">
+                <div className="w-[500px] justify-between hidden lg:flex pr-[2%] ">
                     {
-                        Array(3).fill().map((_,i)=>{
+                        list.map((e,i)=>{
                             return(
-                                <p key={i} className='cursor-pointer'>{list[i]}</p>
+                                <p onClick={()=>{NavClick(e.ref)}} key={i} className='cursor-pointer hover:text-orange-100'>{e.title}</p>
                             )
                         })
                     }
@@ -45,12 +66,12 @@ function Nav() {
                         </div>
                     }
                 </div>
-                <div className={`w-full fixed bg-[#e5f0f6] top-[73px]  p-5 md:p-12 box-border lg:hidden navlist ${nav ? 'block' : 'hidden'}`}>
+                <div className={`w-full fixed bg-[#e5f0f6] top-[73px]  px-[2%]  box-border lg:hidden navlist ${nav ? 'block' : 'hidden'}`}>
                     <ul>
                         {
-                            Array(3).fill().map((_,i)=>{
+                            list.map((e,i)=>{
                                 return(
-                                    <li key={i}>{list[i]}</li>
+                                    <li onClick={()=>{NavClick(e.ref)}} key={i} className='my-8  cursor-pointer hover:text-orange-100'>{e.title}</li>
                                 )
                             })
                         }
@@ -58,7 +79,6 @@ function Nav() {
                 </div>
             </div>
         </div>
-        <div className="h-[70px]"></div>
     </>
   )
 }

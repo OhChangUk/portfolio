@@ -24,8 +24,8 @@ function Project({domRef}) {
     ]
   return (
     <>
-        <div ref={domRef} className="w-full py-24">
-            <p className='text-center md:text-6xl text-4xl font-bold'>My Project</p>
+        <div ref={domRef} className="w-full py-24 font-bold">
+            <p className='text-center md:text-6xl text-4xl '>My Project</p>
             <div className="flex flex-wrap max-w-7xl mx-auto lg:pt-[150px] md:pt-[130px] pt-20 lg:gap-x-[0.5%] md:gap-x-[2%] px-[2%]">
                 {
                     text.map((e,i)=>{
@@ -35,12 +35,12 @@ function Project({domRef}) {
                                     <img src={`./../images/project${i+1}.png`} alt={`project${i+1}`} className='lg:h-full w-full ' />
                                     <div className="lg:block hidden absolute inset-0 bg-slate-700 opacity-0 transition-opacity duration-500 hover:opacity-100">
                                             <div className="text-center text-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ">
-                                                <p className="mb-2 text-2xl font-bold leading-10">{e.project}</p>
+                                                <p className="mb-2 text-2xl leading-10">{e.project}</p>
                                                 <p className="leading-7">{e.project_period}</p>
                                                 <p className="">기여도 : {e.Contribution}</p>
                                             </div>
                                     </div>
-                                    <div className="lg:hidden font-bold  text-center flex flex-col justify-center bg-orange-50 py-[2%]">
+                                    <div className="lg:hidden text-center flex flex-col justify-center bg-orange-50 py-[2%]">
                                         <p className="mb-2 text-2xl">{e.project}</p>
                                         <p className="leading-7">{e.project_period}</p>
                                         <p className="">기여도 : {e.Contribution}</p>

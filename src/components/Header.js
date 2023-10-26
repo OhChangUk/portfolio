@@ -6,7 +6,7 @@ function Header() {
   return (
     <>
       <div className="w-full overflow-hidden header">
-        <img src="./../images/main.jpg" alt="main" className='custom-animation ' />
+        <img src="./../images/main.jpg" alt="main" className='w-full custom-animation ' />
       </div>
     </>
   )

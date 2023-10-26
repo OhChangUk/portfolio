@@ -4,19 +4,19 @@ import { NavLink } from 'react-router-dom'
 function Project({domRef}) {
     const text = [
         {
-            "project" : "푸리푸리",
+            "project" : "puripuri",
             "project_period" : "2023.08.21 ~ 2023.10.09",
             "src" : "https://team-puri.vercel.app/",
             "Contribution" : "20%"
         },
         {
-            "project" : "써브웨이",
+            "project" : "SUBWAY",
             "project_period" : "2023.7.20 ~ 2023.8.16",
             "src" : "https://github.com/OhChangUk/subway",
             "Contribution" : "100%"
         },
         {
-            "project" : "메이플스토리",
+            "project" : "MapleStory",
             "project_period" : "2023.07.04 ~ 2023.8.15",
             "src" : "https://github.com/OhChangUk/maple",
             "Contribution" : "100%"
@@ -40,8 +40,8 @@ function Project({domRef}) {
                                                 <p className="">기여도 : {e.Contribution}</p>
                                             </div>
                                     </div>
-                                    <div className="lg:hidden  text-center flex flex-col justify-center bg-orange-50 py-[2%]">
-                                        <p className="mb-2 text-2xl font-bold">{e.project}</p>
+                                    <div className="lg:hidden font-bold  text-center flex flex-col justify-center bg-orange-50 py-[2%]">
+                                        <p className="mb-2 text-2xl">{e.project}</p>
                                         <p className="leading-7">{e.project_period}</p>
                                         <p className="">기여도 : {e.Contribution}</p>
                                     </div>

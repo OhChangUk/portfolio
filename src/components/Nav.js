@@ -12,15 +12,15 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef}) {
     }
     const list = [
         {
-            "title" : "About Me",
+            "title" : "About",
             "ref" : AboutRef,
         },
         {
-           "title" : "My Skills",
+           "title" : "Skills",
            "ref" : SkillsRef,
         }, 
         {
-            "title" : "My Project",
+            "title" : "Projects",
             "ref" : ProjectRef,
         }
     ]
@@ -44,7 +44,7 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef}) {
                     {
                         list.map((e,i)=>{
                             return(
-                                <p onClick={()=>{NavClick(e.ref)}} key={i} className='cursor-pointer hover:text-orange-100'>{e.title}</p>
+                                <p onClick={()=>{NavClick(e.ref)}} key={i} className='cursor-pointer hover:text-orange-300'>{e.title}</p>
                             )
                         })
                     }
@@ -66,12 +66,12 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef}) {
                         </div>
                     }
                 </div>
-                <div className={`w-full fixed bg-[#e5f0f6] top-[73px]  px-[2%]  box-border lg:hidden navlist ${nav ? 'block' : 'hidden'}`}>
+                <div className={`w-full fixed bg-orange-100 top-[73px]  px-[2%]  box-border lg:hidden navlist ${nav ? 'block' : 'hidden'}`}>
                     <ul>
                         {
                             list.map((e,i)=>{
                                 return(
-                                    <li onClick={()=>{NavClick(e.ref)}} key={i} className='my-8  cursor-pointer hover:text-orange-100'>{e.title}</li>
+                                    <li onClick={()=>{NavClick(e.ref)}} key={i} className='my-8  cursor-pointer'>{e.title}</li>
                                 )
                             })
                         }

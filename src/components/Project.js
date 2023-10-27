@@ -25,7 +25,7 @@ function Project({domRef}) {
   return (
     <>
         <div ref={domRef} className="w-full md:pt-48 pt-32 lg:pb-32 pb-28 font-bold">
-            <p className='text-center md:text-6xl text-4xl '>My Project</p>
+            <p className='text-center md:text-6xl text-4xl '>Projects</p>
             <div className="flex flex-wrap max-w-7xl mx-auto lg:pt-[150px] md:pt-[130px] pt-20 lg:gap-x-[0.5%] md:gap-x-[2%] px-[2%]">
                 {
                     text.map((e,i)=>{

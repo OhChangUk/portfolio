@@ -20,7 +20,7 @@ function Skills({domRef}) {
     const skill = ["HTML5", "CSS3", "JavaScript", "React", "Tailwind", "Github", "Figma", "Nodejs", "SCSS", "Styled-component", "MongoDB", "Firebase", "Notion", "Slack"]
   return (
     <>
-        <div ref={domRef} className="w-full pb-24 pt-32 bg-orange-50">
+        <div ref={domRef} className="w-full md:pt-48 pt-32 lg:pb-32 pb-28 bg-orange-50">
             <p className='text-center md:text-6xl text-4xl font-bold'>My Skills</p>
             <div className="flex max-w-7xl mx-auto lg:pt-[150px] md:pt-[130px] pt-20 justify-between px-[2%]">
                 <p className='lg:text-[130px] md:text-[100px] text-[15vw] font-extrabold'>Oh</p>

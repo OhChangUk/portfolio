@@ -3,7 +3,7 @@ import React from 'react'
 function AboutMe({domRef}) {
   return (
     <>
-        <div ref={domRef} className="w-full md:pt-48 pt-28 pb-32 ">
+        <div ref={domRef} className="w-full md:pt-48 pt-32 lg:pb-32 pb-28 ">
             <p className='text-center md:text-6xl text-4xl font-bold'>About Me</p>
             <div className="lg:flex md:flex max-w-7xl mx-auto lg:pt-[150px] md:pt-[130px] pt-20 justify-between px-[2%]">
                 <img src="./../../images/me.jpg" alt="1" className='lg:w-[350px] md:w-[300px] w-full  lg:mr-[100px] md:mr-[50px]'/>

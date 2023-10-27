@@ -4,7 +4,6 @@ import {Navigation, Autoplay, Pagination} from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
-import WOW from 'wowjs'
 
 
 function Skills({domRef}) {
@@ -20,59 +19,59 @@ function Skills({domRef}) {
     const skill = [
         {
             "name" : "HTML5",
-            "explanation" : "Lorem, ipsum dolor sit amet consectetur adipisicing"
+            "explanation" : "웹 페이지의 구조와 내용을 정의하는 마크업 언어입니다."
         }, 
         {
             "name" : "CSS3",
-            "explanation" : "Lorem, ipsum dolor sit amet consectetur adipisicing"
+            "explanation" : "웹 페이지의 디자인, 레이아웃, 스타일을 정의하는 언어입니다."
         }, 
         {
             "name" : "JavaScript",
-            "explanation" : "Lorem, ipsum dolor sit amet consectetur adipisicing"
+            "explanation" : "웹 페이지를 동적으로 제어하고 상호 작용을 가능하게 하는 프로그래밍 언어입니다."
         }, 
         {
             "name" : "React",
-            "explanation" : "Lorem, ipsum dolor sit amet consectetur adipisicing"
+            "explanation" : "사용자 인터페이스를 만들기 위한 JavaScript 라이브러리입니다."
         }, 
         {
             "name" : "Tailwind",
-            "explanation" : "Lorem, ipsum dolor sit amet consectetur adipisicing"
+            "explanation" : "클래스 기반의 스타일링 프레임워크입니다."
         }, 
         {
             "name" : "Github",
-            "explanation" : "Lorem, ipsum dolor sit amet consectetur adipisicing"
+            "explanation" : " 소프트웨어 개발자들이 버전 관리와 협업을 할 수 있는 플랫폼입니다."
         }, 
         {
             "name" : "Figma",
-            "explanation" : "Lorem, ipsum dolor sit amet consectetur adipisicing"
+            "explanation" : "웹 기반의 협업 디자인 툴입니다."
         }, 
         {
             "name" : "Nodejs",
-            "explanation" : "Lorem, ipsum dolor sit amet consectetur adipisicing"
+            "explanation" : "비동기적인 이벤트 처리를 갖추어 빠르고 확장 가능한 네트워크 애플리케이션을 만들 수 있게 해줍니다."
         }, 
         {
             "name" : "SCSS",
-            "explanation" : "Lorem, ipsum dolor sit amet consectetur adipisicing"
+            "explanation" : "스타일을 보다 효율적으로 작성할 수 있는 CSS 전처리기 언어입니다."
         }, 
         {
             "name" : "Styled-Component",
-            "explanation" : "Lorem, ipsum dolor sit amet consectetur adipisicing"
+            "explanation" : "React 애플리케이션에서 컴포넌트 단위로 스타일을 정의하고 적용하는 라이브러리입니다."
         },
         {
             "name" : "MongoDB",
-            "explanation" : "Lorem, ipsum dolor sit amet consectetur adipisicing"
+            "explanation" : "NoSQL 데이터베이스로, 데이터 저장 및 관리를 제공하는 데이터베이스 시스템입니다."
         }, 
         {
             "name" : "Firebase",
-            "explanation" : "Lorem, ipsum dolor sit amet consectetur adipisicing"
+            "explanation" : "실시간 데이터베이스, 인증, 호스팅 등 다양한 기능을 제공해주는 서비스입니다."
         }, 
         {
             "name" : "Notion",
-            "explanation" : "Lorem, ipsum dolor sit amet consectetur adipisicing"
+            "explanation" : "문서, 테이블, 프로젝트 등을 효과적으로 관리하고 공유할 수 있는 툴입니다."
         }, 
         {
             "name" : "Slack",
-            "explanation" : "Lorem, ipsum dolor sit amet consectetur adipisicing"
+            "explanation" : "비즈니스 및 팀 커뮤니케이션을 위한 실시간 채팅 및 협업 플랫폼입니다."
         }
     ]
   return (
@@ -102,25 +101,12 @@ function Skills({domRef}) {
                             pauseOnMouseEnter: true
                         }}
                         loop={true}
-                      
-                        onSlideChange={
-                            ()=>{
-                                new WOW.WOW({
-                                    live: false
-                            }).init()
-                            }
-                        }
                     >
                         {
                             skill.map((e, i) => {
                                 return (
-                                    <SwiperSlide key={i} className="relative ">
+                                    <SwiperSlide key={i}>
                                         <img src={`./../../images/skill${i + 1}.png`} alt="" className='md:w-[90%] w-[70%] mx-auto lg:h-[35%] md:h-[70px] h-[45%] lg:mt-5 cursor-pointer' onClick={() => handleImageClick(i)} />
-                                        {selectedImage === i && (
-                                            <div className='absolute whitespace-nowrap md:bottom-[15%] bottom-0 left-1/2 transform -translate-x-1/2 bg-black text-white'>
-                                                {e.name} : {e.explanation}
-                                            </div>
-                                        )}
                                         <p className='md:w-[90%] w-[70%] lg:h-5 md:h-3 h-[8px] bg-black lg:mt-5 md:mt-3 mt-[10%] mx-auto'></p>
                                     </SwiperSlide>
                                 )
@@ -130,6 +116,11 @@ function Skills({domRef}) {
                 </div>
                 <p className='lg:text-[130px] md:text-[100px] text-[15vw] font-extrabold'>!</p>
             </div>
+            {selectedImage !== null && (
+                <div className='px-[2%] mt-[2%] text-center md:text-xl text-base font-bold z-30'>
+                    {skill[selectedImage].name} : {skill[selectedImage].explanation}
+                </div>
+            )}
         </div>
     </>
   )

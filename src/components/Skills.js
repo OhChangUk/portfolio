@@ -58,7 +58,7 @@ function Skills({domRef}) {
                                     <SwiperSlide key={i} className="relative ">
                                         <img src={`./../../images/skill${i + 1}.png`} alt="" className='md:w-[90%] w-[70%] mx-auto lg:h-[35%] md:h-[70px] h-[45%] lg:mt-5 cursor-pointer' onClick={() => handleImageClick(i)} />
                                         {selectedImage === i && (
-                                            <div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-black text-white'>
+                                            <div className='absolute whitespace-nowrap md:bottom-[15%] bottom-0 left-1/2 transform -translate-x-1/2 bg-black text-white'>
                                             {e}
                                             </div>
                                         )}

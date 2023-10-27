@@ -30,7 +30,7 @@ function Project({domRef}) {
                 {
                     text.map((e,i)=>{
                         return(
-                            <NavLink key={i} to={e.src} target='_blank' className=" lg:h-64 lg:basis-[33%] md:basis-[49%] basis-full md:mb-[2%] mb-[4%] cursor-pointer relative">
+                            <NavLink key={i} to={e.src} target='_blank' className=" lg:h-64 lg:basis-[33%] md:basis-[49%] basis-full md:mb-[2%] mb-[5%] cursor-pointer relative">
                                 <div className="lg:h-full basis-full border border-[#ddd]">
                                     <img src={`./../images/project${i+1}.png`} alt={`project${i+1}`} className='lg:h-full w-full ' />
                                     <div className="lg:block hidden absolute inset-0 bg-slate-700 opacity-0 transition-opacity duration-500 hover:opacity-100">

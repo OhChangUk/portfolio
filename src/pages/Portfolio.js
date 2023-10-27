@@ -4,6 +4,7 @@ import Nav from '../components/Nav'
 import AboutMe from '../components/AboutMe'
 import Skills from '../components/Skills'
 import Project from '../components/Project'
+import Footer from '../components/Footer'
 
 function Portfolio() {
   const HeaderRef = useRef(null);
@@ -22,6 +23,7 @@ function Portfolio() {
         <AboutMe domRef={AboutRef} />
         <Skills domRef={SkillsRef} />
         <Project domRef={ProjectRef} />
+        <Footer />
     </>
   )
 }

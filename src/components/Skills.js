@@ -76,11 +76,12 @@ function Skills({domRef}) {
     ]
   return (
     <>
-        <div ref={domRef} className="w-full md:pt-48 pt-32 lg:pb-32 pb-28 bg-orange-50">
-            <p className='text-center md:text-6xl text-4xl font-bold pb-5'>Skills</p>
-            <p className="text-center md:text-xl text-base ">제가 사용할 수 있는 기술 스택입니다.</p>
+        <div ref={domRef} className="w-full md:pt-48 pt-32 lg:pb-32 pb-28 bg-orange-50 font-bold">
+            <p className='text-center md:text-6xl text-4xl pb-5'>Skills</p>
+            <p className="text-center md:text-xl text-base">사용 가능한 기술 스택입니다.</p>
+            <p className="text-center text-sm font-normal text-gray-400 leading-7">이미지를 클릭해보세요.</p>
             <div className="flex max-w-7xl mx-auto lg:pt-[140px] md:pt-[130px] pt-20 justify-between px-[2%]">
-                <p className='lg:text-[130px] md:text-[100px] text-[15vw] font-bold'>Oh</p>
+                <p className='lg:text-[130px] md:text-[100px] text-[15vw]'>Oh</p>
                 <div className="flex md:w-[75%] w-[70vw] justify-around">
                     <Swiper className=''
                         modules={[Autoplay, Navigation, Pagination]}
@@ -114,10 +115,10 @@ function Skills({domRef}) {
                         }
                     </Swiper>
                 </div>
-                <p className='lg:text-[130px] md:text-[100px] text-[15vw] font-bold'>!</p>
+                <p className='lg:text-[130px] md:text-[100px] text-[15vw]'>!</p>
             </div>
             {selectedImage !== null && (
-                <div className='px-[2%] mt-[2%] text-center md:text-xl text-base font-bold z-30'>
+                <div className='px-[2%] mt-[2%] text-center md:text-xl text-base z-30'>
                     {skill[selectedImage].name} : {skill[selectedImage].explanation}
                 </div>
             )}

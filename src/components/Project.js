@@ -12,14 +12,14 @@ function Project({domRef}) {
         },
         {
             "project" : "SUBWAY",
-            "project_period" : "2023.7.20 ~ 2023.8.16",
+            "project_period" : "2023.07.20 ~ 2023.08.16",
             "src" : "https://github.com/OhChangUk/subway",
             "Contribution" : "100%",
             "skill" : "HTML, CSS"
         },
         {
             "project" : "MapleStory",
-            "project_period" : "2023.07.04 ~ 2023.8.15",
+            "project_period" : "2023.07.04 ~ 2023.08.15",
             "src" : "https://github.com/OhChangUk/maple",
             "Contribution" : "100%",
             "skill" : "HTML, CSS, Javascript"
@@ -39,7 +39,7 @@ function Project({domRef}) {
                                     <div className="lg:block hidden absolute inset-0 bg-slate-700 opacity-0 transition-opacity duration-500 hover:opacity-100">
                                             <div className="text-center text-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ">
                                                 <p className="mb-2 text-2xl leading-10">{e.project}</p>
-                                                <p className="leading-7">{e.project_period}</p>
+                                                <p className="leading-7 whitespace-nowrap">{e.project_period}</p>
                                                 <p className="">기여도 : {e.Contribution}</p>
                                                 <p>기술 스택 : {e.skill}</p>
                                             </div>

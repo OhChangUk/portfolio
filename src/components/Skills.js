@@ -46,7 +46,7 @@ function Skills({domRef}) {
             "explanation" : "웹 기반의 협업 디자인 툴입니다."
         }, 
         {
-            "name" : "Nodejs",
+            "name" : "Node.js",
             "explanation" : "비동기적인 이벤트 처리를 갖추어 빠르고 확장 가능한 네트워크 애플리케이션을 만들 수 있게 해줍니다."
         }, 
         {
@@ -70,8 +70,8 @@ function Skills({domRef}) {
             "explanation" : "문서, 테이블, 프로젝트 등을 효과적으로 관리하고 공유할 수 있는 툴입니다."
         }, 
         {
-            "name" : "Slack",
-            "explanation" : "비즈니스 및 팀 커뮤니케이션을 위한 실시간 채팅 및 협업 플랫폼입니다."
+            "name" : "Next.js",
+            "explanation" : "React 기반의 SSR(서버사이드 렌더링) 및 정적 사이트 생성을 지원하는 웹 프레임워크입니다."
         }
     ]
   return (
@@ -80,7 +80,7 @@ function Skills({domRef}) {
             <p className='text-center md:text-6xl text-4xl font-bold pb-5'>Skills</p>
             <p className="text-center md:text-xl text-base ">제가 사용할 수 있는 기술 스택입니다.</p>
             <div className="flex max-w-7xl mx-auto lg:pt-[140px] md:pt-[130px] pt-20 justify-between px-[2%]">
-                <p className='lg:text-[130px] md:text-[100px] text-[15vw] font-extrabold'>Oh</p>
+                <p className='lg:text-[130px] md:text-[100px] text-[15vw] font-bold'>Oh</p>
                 <div className="flex md:w-[75%] w-[70vw] justify-around">
                     <Swiper className=''
                         modules={[Autoplay, Navigation, Pagination]}
@@ -114,7 +114,7 @@ function Skills({domRef}) {
                         }
                     </Swiper>
                 </div>
-                <p className='lg:text-[130px] md:text-[100px] text-[15vw] font-extrabold'>!</p>
+                <p className='lg:text-[130px] md:text-[100px] text-[15vw] font-bold'>!</p>
             </div>
             {selectedImage !== null && (
                 <div className='px-[2%] mt-[2%] text-center md:text-xl text-base font-bold z-30'>

@@ -15,7 +15,7 @@ function Project({domRef}) {
             "project_period" : "2023.07.20 ~ 2023.08.16",
             "src" : "https://github.com/OhChangUk/subway",
             "Contribution" : "100%",
-            "skill" : "HTML, CSS"
+            "skill" : "HTML, CSS, Javascript"
         },
         {
             "project" : "MapleStory",

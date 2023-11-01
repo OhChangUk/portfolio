@@ -12,14 +12,14 @@ function Project({domRef}) {
         },
         {
             "project" : "SUBWAY",
-            "project_period" : "2023.07.20 ~ 2023.08.16",
+            "project_period" : "2023.07.20 ~ 2023.07.22",
             "src" : "https://github.com/OhChangUk/subway",
             "Contribution" : "100%",
             "skill" : "HTML, CSS, Javascript"
         },
         {
             "project" : "MapleStory",
-            "project_period" : "2023.07.04 ~ 2023.08.15",
+            "project_period" : "2023.07.04 ~ 2023.08.02",
             "src" : "https://github.com/OhChangUk/maple",
             "Contribution" : "100%",
             "skill" : "HTML, CSS, Javascript"

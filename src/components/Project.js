@@ -4,6 +4,13 @@ import { NavLink } from 'react-router-dom'
 function Project({domRef}) {
     const text = [
         {
+            "project" : "Oh-! ChangUk",
+            "project_period" : "2023.10.19 ~ 2023.11.01",
+            "src" : "https://changuk-portfolio.vercel.app/",
+            "Contribution" : "100%",
+            "skill" : "React, tailwind"
+        },
+        {
             "project" : "puripuri",
             "project_period" : "2023.08.21 ~ 2023.10.09",
             "src" : "https://team-puri.vercel.app/",
@@ -29,11 +36,11 @@ function Project({domRef}) {
     <>
         <div ref={domRef} className="w-full md:pt-48 pt-32 lg:pb-32 pb-28 font-bold">
             <p className='text-center md:text-6xl text-4xl '>Projects</p>
-            <div className="flex flex-wrap max-w-7xl mx-auto lg:pt-[150px] md:pt-[130px] pt-20 lg:gap-x-[0.5%] md:gap-x-[2%] px-[2%]">
+            <div className="flex flex-wrap max-w-7xl mx-auto lg:pt-[150px] md:pt-[130px] pt-20 md:gap-x-[2%] px-[2%]">
                 {
                     text.map((e,i)=>{
                         return(
-                            <NavLink key={i} to={e.src} target='_blank' className=" lg:h-64 lg:basis-[33%] md:basis-[49%] basis-full md:mb-[2%] mb-[5%] cursor-pointer relative">
+                            <NavLink key={i} to={e.src} target='_blank' className=" lg:h-64 lg:basis-[32%] md:basis-[49%] basis-full md:mb-[2%] mb-[5%] cursor-pointer relative">
                                 <div className="lg:h-full basis-full border border-[#ddd]">
                                     <img src={`./../images/project${i+1}.png`} alt={`project${i+1}`} className='lg:h-full w-full ' />
                                     <div className="lg:block hidden absolute inset-0 bg-slate-700 opacity-0 transition-opacity duration-500 hover:opacity-100">

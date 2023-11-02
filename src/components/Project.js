@@ -5,20 +5,12 @@ function Project({domRef}) {
     const [number] = useState(4)
     const text = [
         {
-            "project" : "MapleStory",
-            "type" : "클론 코딩",
-            "project_period" : "2023.07.04 ~ 2023.08.02",
-            "src" : "https://github.com/OhChangUk/maple",
+            "project" : "Oh-! ChangUk",
+            "type" : "포트폴리오",
+            "project_period" : "2023.10.19 ~ 2023.11.01",
+            "src" : "https://changuk-portfolio.vercel.app/",
             "Contribution" : "100%",
-            "skill" : "HTML, CSS, Javascript"
-        },
-        {
-            "project" : "SUBWAY",
-            "type" : "클론 코딩",
-            "project_period" : "2023.07.20 ~ 2023.07.22",
-            "src" : "https://github.com/OhChangUk/subway",
-            "Contribution" : "100%",
-            "skill" : "HTML, CSS, Javascript"
+            "skill" : "React, tailwind"
         },
         {
             "project" : "puripuri",
@@ -29,12 +21,20 @@ function Project({domRef}) {
             "skill" : "React, tailwind"
         },
         {
-            "project" : "Oh-! ChangUk",
-            "type" : "포트폴리오",
-            "project_period" : "2023.10.19 ~ 2023.11.01",
-            "src" : "https://changuk-portfolio.vercel.app/",
+            "project" : "SUBWAY",
+            "type" : "클론 코딩",
+            "project_period" : "2023.07.20 ~ 2023.07.22",
+            "src" : "https://github.com/OhChangUk/subway",
             "Contribution" : "100%",
-            "skill" : "React, tailwind"
+            "skill" : "HTML, CSS, Javascript"
+        },
+        {
+            "project" : "MapleStory",
+            "type" : "클론 코딩",
+            "project_period" : "2023.07.04 ~ 2023.08.02",
+            "src" : "https://github.com/OhChangUk/maple",
+            "Contribution" : "100%",
+            "skill" : "HTML, CSS, Javascript"
         }
     ]
   return (

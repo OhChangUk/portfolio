@@ -59,7 +59,7 @@ function Project({domRef}) {
                             )
                         })
                     }
-                    <select onChange={(e) => {setIsActive(e.target.value); setType(menuArray[e.target.value]);}} className='border border-black outline-none rounded-[5px] p-[6px] md:hidden mt-20 bg-white'>
+                    <select onChange={(e) => {setIsActive(e.target.value); setType(menuArray[e.target.value]);}} className='border border-black outline-none rounded-[5px] p-[6px] flex items-center md:hidden mt-20 bg-white'>
                         {
                             menuArray.map((e,i)=>{
                                 return(

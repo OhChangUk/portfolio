@@ -59,7 +59,7 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef}) {
                             {
                                 Array(3).fill().map((_,i)=>{
                                     return(
-                                        <div className="bg-black h-1 rounded-lg" key={i}></div>
+                                        <div className="bg-black h-[5px] rounded-lg" key={i}></div>
                                     )
                                 })
                             }

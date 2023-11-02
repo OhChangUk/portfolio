@@ -1,35 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 function Project({domRef}) {
+    const [number] = useState(4)
     const text = [
         {
-            "project" : "Oh-! ChangUk",
-            "project_period" : "2023.10.19 ~ 2023.11.01",
-            "src" : "https://changuk-portfolio.vercel.app/",
+            "project" : "MapleStory",
+            "type" : "클론 코딩",
+            "project_period" : "2023.07.04 ~ 2023.08.02",
+            "src" : "https://github.com/OhChangUk/maple",
             "Contribution" : "100%",
-            "skill" : "React, tailwind"
-        },
-        {
-            "project" : "puripuri",
-            "project_period" : "2023.08.21 ~ 2023.10.09",
-            "src" : "https://team-puri.vercel.app/",
-            "Contribution" : "20%",
-            "skill" : "React, tailwind"
+            "skill" : "HTML, CSS, Javascript"
         },
         {
             "project" : "SUBWAY",
+            "type" : "클론 코딩",
             "project_period" : "2023.07.20 ~ 2023.07.22",
             "src" : "https://github.com/OhChangUk/subway",
             "Contribution" : "100%",
             "skill" : "HTML, CSS, Javascript"
         },
         {
-            "project" : "MapleStory",
-            "project_period" : "2023.07.04 ~ 2023.08.02",
-            "src" : "https://github.com/OhChangUk/maple",
+            "project" : "puripuri",
+            "type" : "팀 프로젝트",
+            "project_period" : "2023.08.21 ~ 2023.10.09",
+            "src" : "https://team-puri.vercel.app/",
+            "Contribution" : "20%",
+            "skill" : "React, tailwind"
+        },
+        {
+            "project" : "Oh-! ChangUk",
+            "type" : "포트폴리오",
+            "project_period" : "2023.10.19 ~ 2023.11.01",
+            "src" : "https://changuk-portfolio.vercel.app/",
             "Contribution" : "100%",
-            "skill" : "HTML, CSS, Javascript"
+            "skill" : "React, tailwind"
         }
     ]
   return (
@@ -42,10 +47,11 @@ function Project({domRef}) {
                         return(
                             <NavLink key={i} to={e.src} target='_blank' className=" lg:h-64 lg:basis-[32%] md:basis-[49%] basis-full md:mb-[2%] mb-[5%] cursor-pointer relative">
                                 <div className="lg:h-full basis-full border border-[#ddd]">
-                                    <img src={`./../images/project${i+1}.png`} alt={`project${i+1}`} className='lg:h-full w-full ' />
+                                    <img src={`./../images/project${number - i}.png`} alt={`project${number-i}`} className='lg:h-full w-full ' />
                                     <div className="lg:block hidden absolute inset-0 bg-slate-700 opacity-0 transition-opacity duration-500 hover:opacity-100">
                                             <div className="text-center text-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ">
-                                                <p className="mb-2 text-2xl leading-10">{e.project}</p>
+                                                <p className="text-2xl">{e.project}</p>
+                                                <p className='mb-2'>({e.type})</p>
                                                 <p className="leading-7 whitespace-nowrap">{e.project_period}</p>
                                                 <p className="">기여도 : {e.Contribution}</p>
                                                 <p>기술 스택 : {e.skill}</p>

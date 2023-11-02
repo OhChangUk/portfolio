@@ -55,11 +55,11 @@ function Project({domRef}) {
                     {
                         menuArray.map((e,i)=>{
                             return(
-                                <li key={i} onClick={()=>{setIsActive(i); setType(menuArray[i])}} className={`${isActive === i ? "bg-orange-400 text-white" : "bg-white text-black"} cursor-pointer md:mr-4 mr-2 border dark:bg-[#272929] dark:text-[#ebf4f1] md:block hidden py-2 md:px-5 px-2 text-xs rounded-md lg:mt-[150px] md:mt-[130px] mt-20`}>{e}</li>
+                                <li key={i} onClick={()=>{setIsActive(i); setType(menuArray[i])}} className={`${isActive === i ? "bg-orange-400 text-white" : "bg-white text-black"} cursor-pointer md:mr-4 mr-2 border dark:bg-[#272929] dark:text-[#ebf4f1] md:block hidden py-2 px-5 rounded-md lg:mt-[150px] md:mt-[130px] `}>{e}</li>
                             )
                         })
                     }
-                    <select onChange={(e) => {setIsActive(e.target.value); setType(menuArray[e.target.value]);}} className='border border-black outline-none rounded-[5px] p-1'>
+                    <select onChange={(e) => {setIsActive(e.target.value); setType(menuArray[e.target.value]);}} className='border border-black outline-none rounded-[5px] p-1 md:hidden mt-20'>
                         {
                             menuArray.map((e,i)=>{
                                 return(

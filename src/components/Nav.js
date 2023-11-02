@@ -36,11 +36,11 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef}) {
   return (
     <>
         <div className="w-full border-b border-black bg-white py-5 sticky top-0 z-40">
-            <div className="max-w-7xl mx-auto flex justify-between text-[20px] font-bold">
-                <div className="cursor-pointer ml-[2%] z-30">
+            <div className="max-w-7xl mx-auto flex justify-between text-[20px] font-bold px-[2%]">
+                <div className="cursor-pointer  z-30">
                     <p onClick={()=>window.scrollTo({top:0, behavior:'smooth'})}>Oh-! ChangUk</p>
                 </div>
-                <div className="w-[500px] justify-between hidden lg:flex pr-[2%] ">
+                <div className="w-[500px] justify-between hidden lg:flex ">
                     {
                         list.map((e,i)=>{
                             return(
@@ -50,7 +50,7 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef}) {
                     }
                 </div>
                 
-                <div className="transition-all duration-1000 z-[100] cursor-pointer lg:hidden mr-[2%] flex" onClick={() => {toggleNav() }}>
+                <div className="transition-all duration-1000 z-[100] cursor-pointer lg:hidden flex" onClick={() => {toggleNav() }}>
                     {
                         nav ?
                         <FontAwesomeIcon icon={faXmark} className='w-8 h-8 dark:text-white' />

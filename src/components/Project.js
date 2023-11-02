@@ -4,23 +4,41 @@ import { NavLink } from 'react-router-dom'
 function Project({domRef}) {
     const [isActive, setIsActive] = useState(0)
     const [type, setType] = useState("전체")
-    const menuArray = ["전체", "포트폴리오", "팀 프로젝트", "클론 코딩"]
+    const menuArray = ["전체", "포트폴리오", "팀 프로젝트", "개인 프로젝트", "클론 코딩"]
     const text = [
         {
             "project" : "Oh-! ChangUk",
             "type" : "포트폴리오",
-            "project_period" : "2023.10.19 ~ 2023.11.01",
-            "src" : "https://changuk-portfolio.vercel.app/",
+            "project_period" : "2023.10.19 ~ 진행 중",
+            "src" : "https://github.com/OhChangUk/portfolio",
             "Contribution" : "100%",
             "skill" : "React, tailwind",
-            "img" : "project4.png"
+            "img" : "project6.png"
+        },
+        {
+            "project" : "택배 조회",
+            "type" : "개인 프로젝트",
+            "project_period" : "2023.10.24 ~ 2023.10.26",
+            "src" : "https://github.com/OhChangUk/parcel",
+            "Contribution" : "100%",
+            "skill" : "Typescript, tailwind",
+            "img" : "project5.png"
         },
         {
             "project" : "puripuri",
             "type" : "팀 프로젝트",
             "project_period" : "2023.08.21 ~ 2023.10.09",
-            "src" : "https://team-puri.vercel.app/",
+            "src" : "https://github.com/dldmswn0719/Team-Puri",
             "Contribution" : "20%",
+            "skill" : "React, tailwind",
+            "img" : "project4.png"
+        },
+        {
+            "project" : "퀴즈",
+            "type" : "개인 프로젝트",
+            "project_period" : "2023.08.29",
+            "src" : "https://github.com/dldmswn0719/Team-Puri",
+            "Contribution" : "100%",
             "skill" : "React, tailwind",
             "img" : "project3.png"
         },
@@ -36,7 +54,7 @@ function Project({domRef}) {
         {
             "project" : "MapleStory",
             "type" : "클론 코딩",
-            "project_period" : "2023.07.04 ~ 2023.08.02",
+            "project_period" : "2023.07.04 ~ 2023.07.23",
             "src" : "https://github.com/OhChangUk/maple",
             "Contribution" : "100%",
             "skill" : "HTML, CSS, Javascript",
@@ -76,7 +94,7 @@ function Project({domRef}) {
                         return(
                             <NavLink key={i} to={e.src} target='_blank' className=" lg:h-64 lg:basis-[32%] md:basis-[49%] basis-full md:mb-[2%] mb-[5%] cursor-pointer relative">
                                 <div className="lg:h-full basis-full border border-[#ddd]">
-                                    <img src={`./../images/${e.img}`} alt={e.project} className='lg:h-full w-full ' />
+                                    <img src={`./../images/${e.img}`} alt={e.project} className='lg:h-full md:h-48 h-44 w-full ' />
                                     <div className="lg:block hidden absolute inset-0 bg-slate-700 opacity-0 transition-opacity duration-500 hover:opacity-100">
                                             <div className="text-center text-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ">
                                                 <p className="text-2xl">{e.project}</p>

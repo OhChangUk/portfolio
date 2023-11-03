@@ -1,5 +1,5 @@
 # Portfolio
-메이플스토리
+Oh-! ChangUk
 
 ## 🖥 프로젝트 소개
 프론트엔드 개발자 포트폴리오 사이트입니다.
@@ -28,4 +28,4 @@
 
 ## 💡 문제 해결!
 - Swiper에 클래스 이름을 주고 SwiperSlide에 onMouseOver를 이용해 마우스를 올렸을 경우 클래스의 autoplay가 멈추고, onMouseOut로 빠져 나왔을 때 autoplay를 시작하게 하였습니다.
-- 
+<img src="https://github.com/OhChangUk/portfolio/assets/142365374/c6681d76-77fb-4d3b-9faf-1709f09adb61">

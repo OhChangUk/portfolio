@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Portfolio
+Oh-! ChangUk
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🖥 프로젝트 소개
+프론트엔드 개발자 포트폴리오 사이트입니다.
 
-## Available Scripts
+## ⏰ 개발 기간
+- 2023.10.19 ~ 진행 중
 
-In the project directory, you can run:
+## 🙍‍♂️ 개발 인원
+- Front-end 1명 (오창욱)
 
-### `yarn start`
+## 🛠 기술 스택
+<p float="left">
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=black">
+  <img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=for-the-badge&logo=Tailwind CSS&logoColor=white">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ⚙ 주요 기능
+- **filter**를 이용해 카테고리별로 선택할 수 있도록 기능을 추가하였습니다.
+<p align="center" width="100%">
+  <img src="https://github.com/OhChangUk/portfolio/assets/142365374/0e7c39d4-8542-429e-8dc0-67c645d03f85" width="100%">
+<p align="center" width="100%">
+  <img src="https://github.com/OhChangUk/portfolio/assets/142365374/68856827-3af4-4fc4-9e2d-26b47bba9837" width="40%">
+  <img src="https://github.com/OhChangUk/portfolio/assets/142365374/81741f58-3dfc-48f1-8956-f122cf9b9883" width="40%">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 😵 문제 발생!
+- Swiper에 **pauseOnMouseEnter** 기능을 추가하여 마우스를 올렸을 경우 멈추긴 하지만 Swiper가 넘어가는 순간에 마우스를 올리면 멈추지 않는 버그가 발생하였습니다.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 💡 문제 해결!
+- Swiper에 클래스 이름을 주고 SwiperSlide에 onMouseOver를 이용해 마우스를 올렸을 경우 클래스의 autoplay가 멈추고, onMouseOut로 빠져 나왔을 때 autoplay를 시작하게 하였습니다.
+<img src="https://github.com/OhChangUk/portfolio/assets/142365374/c6681d76-77fb-4d3b-9faf-1709f09adb61">

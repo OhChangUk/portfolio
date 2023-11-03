@@ -7,15 +7,9 @@ import 'swiper/css/navigation'
 
 
 function Skills({domRef}) {
-    const [selectedImage, setSelectedImage] = useState(null);
+    const [selectedImage, setSelectedImage] = useState(0);
 
-    const handleImageClick = (i) => {
-        if (selectedImage === i) {
-        setSelectedImage(null);
-        } else {
-        setSelectedImage(i);
-        }
-    }
+    
     const skill = [
         {
             "name" : "HTML5",
@@ -34,7 +28,7 @@ function Skills({domRef}) {
             "explanation" : "사용자 인터페이스를 만들기 위한 JavaScript 라이브러리입니다."
         }, 
         {
-            "name" : "Tailwind",
+            "name" : "TailwindCSS",
             "explanation" : "클래스 기반의 스타일링 프레임워크입니다."
         }, 
         {
@@ -80,11 +74,13 @@ function Skills({domRef}) {
         <div ref={domRef} className="w-full md:pt-48 pt-32 lg:pb-32 pb-28 bg-orange-50 font-bold">
             <p className='text-center md:text-6xl text-4xl pb-5'>Skills</p>
             <p className="text-center md:text-xl text-base">사용 가능한 기술 스택입니다.</p>
-            <p className="text-center text-sm font-normal text-gray-400 leading-7">이미지를 클릭해보세요.</p>
             <div className="flex max-w-7xl mx-auto lg:pt-[140px] md:pt-[130px] pt-20 justify-between px-[2%]">
                 <p className='lg:text-[130px] md:text-[100px] text-[15vw]'>Oh</p>
                 <div className="flex md:w-[75%] w-[70vw] justify-around">
                     <Swiper className='swiper-skill'
+                        onSlideChange={(swiper) => {
+                            setSelectedImage(swiper.realIndex);
+                        }}
                         modules={[Autoplay, Navigation, Pagination]}
                         breakpoints={{
                             1024:{
@@ -98,7 +94,7 @@ function Skills({domRef}) {
                             }
                         }}
                         autoplay={{
-                            delay : 1000,
+                            delay : 4000,
                             disableOnInteraction: false
                         }}
                         loop={true}
@@ -107,7 +103,7 @@ function Skills({domRef}) {
                             skill.map((e, i) => {
                                 return (
                                     <SwiperSlide key={i} onMouseOver={()=>{document.querySelector(".swiper-skill").swiper.autoplay.stop()}} onMouseOut={()=>{document.querySelector(".swiper-skill").swiper.autoplay.start()}} >
-                                        <img src={`./../../images/skill${i + 1}.png`} alt="" className='md:w-[90%] w-[70%] mx-auto lg:h-[35%] md:h-[70px] h-[45%] lg:mt-5 cursor-pointer' onClick={() => handleImageClick(i)} />
+                                        <img src={`./../../images/skill${i + 1}.png`} alt={e.name} className='max-w-full mx-auto lg:h-[35%] md:h-[70px] h-[45%] lg:mt-5 cursor-pointer' />
                                         <p className='md:w-[90%] w-[70%] lg:h-5 md:h-3 h-[8px] bg-black lg:mt-5 md:mt-3 mt-[10%] mx-auto'></p>
                                     </SwiperSlide>
                                 )

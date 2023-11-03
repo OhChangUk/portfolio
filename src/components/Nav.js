@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef}) {
     const [nav, setNav] = useState(false)
+    const [theme, setTheme] = useState("orange")
 
     const toggleNav = () => {
         setNav(!nav)
@@ -24,7 +25,28 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef}) {
             "ref" : ProjectRef,
         }
     ]
-
+    const themeColor = {
+        "orange":{
+            "bg" : "bg-orange-500",
+            "hover" : "hover:text-orange-300",
+            "img" : "./../images/main.jpg"
+        },
+        "green":{
+            "bg" : "bg-green-400",
+            "hover" : "hover:text-green-300",
+            "img" : "./../images/main2.jpg"
+        },
+        "blue":{
+            "bg" : "bg-blue-400",
+            "hover" : "hover:text-blue-300",
+            "img" : "./../images/main1.jpg"
+        }
+    }
+    const buttons = [
+        {name: "오렌지", theme: "orange"},
+        {name: "그린", theme: "green"},
+        {name: "블루", theme: "blue"}
+    ]
     
     const NavClick = (ref) => {
         scrollToComponent(ref)
@@ -44,7 +66,14 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef}) {
                     {
                         list.map((e,i)=>{
                             return(
-                                <p onClick={()=>{NavClick(e.ref)}} key={i} className='cursor-pointer hover:text-orange-300'>{e.title}</p>
+                                <p onClick={()=>{NavClick(e.ref)}} key={i} className={`${themeColor[theme].hover} cursor-pointer`}>{e.title}</p>
+                            )
+                        })
+                    }
+                    {
+                        buttons.map((e,i)=>{
+                            return(
+                                <p key={i} onClick={()=>setTheme(e.theme)}>{e.name}</p>
                             )
                         })
                     }
@@ -66,7 +95,7 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef}) {
                         </div>
                     }
                 </div>
-                <div className={`w-full fixed bg-orange-100 top-[73px]  px-[2%]  box-border lg:hidden navlist ${nav ? 'block' : 'hidden'}`}>
+                <div className={`w-full fixed bg-orange-100 top-[73px] left-0  px-[2%]  box-border lg:hidden navlist ${nav ? 'block' : 'hidden'}`}>
                     <ul>
                         {
                             list.map((e,i)=>{

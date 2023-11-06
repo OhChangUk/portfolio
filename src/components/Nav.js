@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 
-function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef}) {
+function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef, themeColor, buttons, theme, setTheme}) {
     const [nav, setNav] = useState(false)
-    const [theme, setTheme] = useState("orange")
+    
 
     const toggleNav = () => {
         setNav(!nav)
@@ -25,28 +25,7 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef}) {
             "ref" : ProjectRef,
         }
     ]
-    const themeColor = {
-        "orange":{
-            "bg" : "bg-orange-500",
-            "hover" : "hover:text-orange-300",
-            "img" : "./../images/main.jpg"
-        },
-        "green":{
-            "bg" : "bg-green-400",
-            "hover" : "hover:text-green-300",
-            "img" : "./../images/main2.jpg"
-        },
-        "blue":{
-            "bg" : "bg-blue-400",
-            "hover" : "hover:text-blue-300",
-            "img" : "./../images/main1.jpg"
-        }
-    }
-    const buttons = [
-        {name: "오렌지", theme: "orange"},
-        {name: "그린", theme: "green"},
-        {name: "블루", theme: "blue"}
-    ]
+    
     
     const NavClick = (ref) => {
         scrollToComponent(ref)
@@ -58,11 +37,11 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef}) {
   return (
     <>
         <div className="w-full border-b border-black bg-white py-5 sticky top-0 z-40">
-            <div className="max-w-7xl mx-auto flex justify-between text-[20px] font-bold px-[2%]">
+            <div className="max-w-7xl mx-auto flex items-center justify-between text-xl font-bold px-[2%]">
                 <div className="cursor-pointer  z-30">
                     <p onClick={()=>window.scrollTo({top:0, behavior:'smooth'})}>Oh-! ChangUk</p>
                 </div>
-                <div className="w-[500px] justify-between hidden lg:flex ">
+                <div className="w-[500px] justify-between items-center hidden lg:flex ">
                     {
                         list.map((e,i)=>{
                             return(
@@ -70,13 +49,18 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef}) {
                             )
                         })
                     }
-                    {
-                        buttons.map((e,i)=>{
-                            return(
-                                <p key={i} onClick={()=>setTheme(e.theme)}>{e.name}</p>
-                            )
-                        })
-                    }
+                    <div className='flex gap-x-2 items-center text-base'>
+                        <p>테마 색상 : </p>
+                        <select onChange={(e) => setTheme(e.target.value)} className='outline-none border-[2px] border-black rounded-md'>
+                            {buttons.map((e, i) => {
+                                return (
+                                    <option key={i} value={e.theme}>
+                                        {e.name}
+                                    </option>
+                                );
+                            })}
+                        </select>
+                    </div>
                 </div>
                 
                 <div className="transition-all duration-1000 z-[100] cursor-pointer lg:hidden flex" onClick={() => {toggleNav() }}>
@@ -95,15 +79,27 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef}) {
                         </div>
                     }
                 </div>
-                <div className={`w-full fixed bg-orange-100 top-[73px] left-0  px-[2%]  box-border lg:hidden navlist ${nav ? 'block' : 'hidden'}`}>
+                <div className={`${themeColor[theme].mobileNav} w-full fixed  top-[73px] left-0  px-[2%]  box-border lg:hidden navlist ${nav ? 'block' : 'hidden'}`}>
                     <ul>
                         {
                             list.map((e,i)=>{
                                 return(
-                                    <li onClick={()=>{NavClick(e.ref)}} key={i} className='my-8  cursor-pointer'>{e.title}</li>
+                                    <li onClick={()=>{NavClick(e.ref)}} key={i} className='my-8'>{e.title}</li>
                                 )
                             })
                         }
+                        <li className='flex gap-x-2 items-center my-8 text-base'>
+                            <p>테마 색상 : </p>
+                            <select onChange={(e) => setTheme(e.target.value)} className='outline-none border-[2px] border-black rounded-md'>
+                                {buttons.map((e, i) => {
+                                    return (
+                                        <option key={i} value={e.theme}>
+                                            {e.name}
+                                        </option>
+                                    );
+                                })}
+                            </select>
+                        </li>
                     </ul>
                 </div>
             </div>

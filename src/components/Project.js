@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
-function Project({domRef}) {
+function Project({domRef, themeColor, theme}) {
     const [isActive, setIsActive] = useState(0)
     const [type, setType] = useState("전체")
     const menuArray = ["전체", "포트폴리오", "팀 프로젝트", "개인 프로젝트", "클론 코딩"]
@@ -80,7 +80,7 @@ function Project({domRef}) {
                     {
                         menuArray.map((e,i)=>{
                             return(
-                                <li key={i} onClick={()=>{setIsActive(i); setType(menuArray[i])}} className={`${isActive === i ? "bg-orange-400 text-white" : "bg-white text-black"} cursor-pointer md:mr-4 mr-2 border dark:bg-[#272929] dark:text-[#ebf4f1] md:block hidden py-2 px-5 rounded-md `}>{e}</li>
+                                <li key={i} onClick={()=>{setIsActive(i); setType(menuArray[i])}} className={`${isActive === i ? `${themeColor[theme].buttonBg} text-white` : "bg-white text-black"} cursor-pointer md:mr-4 mr-2 border dark:bg-[#272929] dark:text-[#ebf4f1] md:block hidden py-2 px-5 rounded-md `}>{e}</li>
                             )
                         })
                     }
@@ -104,7 +104,7 @@ function Project({domRef}) {
                             <div key={i} className=" lg:h-64 lg:basis-[32%] md:basis-[49%] basis-full md:mb-[2%] mb-[5%] relative">
                                 <div className="lg:h-full basis-full border border-[#ddd]">
                                     <img src={`./../images/${e.img}`} alt={e.project} className='lg:h-full md:h-48 h-44 w-full ' />
-                                    <div className="lg:block hidden  absolute inset-0 bg-orange-50 opacity-0 transition-opacity duration-500 hover:opacity-100">
+                                    <div className={`${themeColor[theme].bg} lg:block hidden  absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100 border border-[#ddd]`}>
                                             <div className="text-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ">
                                                 <p className="text-2xl">{e.project}</p>
                                                 <p className='mb-2 text-sm'>({e.type})</p>
@@ -117,7 +117,7 @@ function Project({domRef}) {
                                                 </div>
                                             </div>
                                     </div>
-                                    <div className="lg:hidden text-center flex flex-col justify-center bg-orange-50 py-[2%]">
+                                    <div className={`${themeColor[theme].bg} lg:hidden text-center flex flex-col justify-center py-[2%]`}>
                                         <p className="text-2xl">{e.project}</p>
                                         <p className='mb-2 text-sm'>({e.type})</p>
                                         <p className="leading-7">{e.project_period}</p>

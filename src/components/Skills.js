@@ -6,8 +6,9 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
 
-function Skills({domRef}) {
+function Skills({domRef, themeColor, theme}) {
     const [selectedImage, setSelectedImage] = useState(0);
+
 
     
     const skill = [
@@ -71,7 +72,7 @@ function Skills({domRef}) {
     
   return (
     <>
-        <div ref={domRef} className="w-full md:pt-48 pt-32 lg:pb-32 pb-28 bg-orange-50 font-bold">
+        <div ref={domRef} className={`w-full md:pt-48 pt-32 lg:pb-32 pb-28 font-bold ${themeColor[theme].bg}`}>
             <p className='text-center md:text-6xl text-4xl pb-5'>Skills</p>
             <p className="text-center md:text-xl text-base">사용 가능한 기술 스택입니다.</p>
             <div className="flex max-w-7xl mx-auto lg:pt-[140px] md:pt-[130px] pt-20 justify-between px-[2%]">
@@ -114,11 +115,13 @@ function Skills({domRef}) {
             
                 <p className='lg:text-[130px] md:text-[100px] text-[15vw]'>!</p>
             </div>
-            {selectedImage !== null && (
-                <div className='px-[2%] mt-[2%] text-center md:text-xl text-base z-30'>
-                    {skill[selectedImage].name} : {skill[selectedImage].explanation}
-                </div>
-            )}
+            <div className="">
+                {selectedImage !== null && (
+                    <div className='px-[2%] mt-[2%] text-center md:text-xl text-base z-30'>
+                        {skill[selectedImage].name} : {skill[selectedImage].explanation}
+                    </div>
+                )}
+            </div>
         </div>
     </>
   )

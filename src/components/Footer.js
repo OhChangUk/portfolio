@@ -1,10 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-function Footer() {
+function Footer({themeColor, theme}) {
   return (
     <>
-        <div className="bg-orange-50 py-14  w-full">
+        <div className={`${themeColor[theme].bg} py-14  w-full`}>
             <NavLink to={"https://github.com/OhChangUk"} target='_blank' className="">
                 <img src="./../images/skill6.png" alt="github" className='w-14 mx-auto mb-5' />
             </NavLink>

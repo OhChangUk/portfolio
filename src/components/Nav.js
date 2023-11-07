@@ -36,9 +36,9 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef, themeColor, bu
     
   return (
     <>
-        <div className="w-full border-b border-black bg-white py-5 sticky top-0 z-40">
-            <div className="max-w-7xl mx-auto flex items-center justify-between text-xl font-bold px-[2%]">
-                <div className="cursor-pointer  z-30">
+        <div className="w-full border-b border-black dark:bg-black bg-white py-5 sticky top-0 z-40">
+            <div className="max-w-7xl mx-auto flex items-center justify-between text-xl font-bold lg:px-[2%] px-5">
+                <div className="cursor-pointer z-30">
                     <p onClick={()=>window.scrollTo({top:0, behavior:'smooth'})}>Oh-! ChangUk</p>
                 </div>
                 <div className="w-[500px] justify-between items-center hidden lg:flex ">

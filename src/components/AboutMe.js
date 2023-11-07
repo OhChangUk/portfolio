@@ -3,7 +3,7 @@ import React from 'react'
 function AboutMe({domRef}) {
   return (
     <>
-        <div ref={domRef} className="w-full md:pt-48 pt-32 lg:pb-32 pb-28 ">
+        <div ref={domRef} className="w-full md:pt-48 pt-32 lg:pb-32 pb-28">
             <p className='text-center md:text-6xl text-4xl font-bold pb-5'>About</p>
             <p className="text-center md:text-xl text-base font-bold">저를 소개하겠습니다.</p>
             <div className="lg:flex md:flex max-w-7xl mx-auto lg:pt-[150px] md:pt-[130px] pt-20 justify-between px-[2%]">

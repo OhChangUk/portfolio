@@ -61,8 +61,8 @@ function Skills({domRef, themeColor, theme}) {
             "explanation" : "실시간 데이터베이스, 인증, 호스팅 등 다양한 기능을 제공해주는 서비스입니다."
         }, 
         {
-            "name" : "Notion",
-            "explanation" : "문서, 테이블, 프로젝트 등을 효과적으로 관리하고 공유할 수 있는 툴입니다."
+            "name" : "TypeScript",
+            "explanation" : "JavaScript에 정적 타입을 추가하여 코드의 안정성과 가독성을 높이는 것을 목표로 합니다."
         }, 
         {
             "name" : "Next.js",
@@ -95,7 +95,7 @@ function Skills({domRef, themeColor, theme}) {
                             }
                         }}
                         autoplay={{
-                            delay : 4000,
+                            delay : 3000,
                             disableOnInteraction: false
                         }}
                         loop={true}

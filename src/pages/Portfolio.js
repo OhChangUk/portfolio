@@ -5,6 +5,7 @@ import AboutMe from '../components/AboutMe'
 import Skills from '../components/Skills'
 import Project from '../components/Project'
 import Footer from '../components/Footer'
+import Scroll from '../components/Scroll'
 
 function Portfolio() {
   const HeaderRef = useRef(null);
@@ -53,6 +54,7 @@ function Portfolio() {
         <AboutMe domRef={AboutRef} />
         <Skills domRef={SkillsRef} themeColor={themeColor} theme={theme} />
         <Project domRef={ProjectRef} themeColor={themeColor} theme={theme} />
+        <Scroll themeColor={themeColor} theme={theme} />
         <Footer themeColor={themeColor} theme={theme} />
     </>
   )

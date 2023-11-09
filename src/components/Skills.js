@@ -14,59 +14,59 @@ function Skills({domRef, themeColor, theme}) {
     const skill = [
         {
             "name" : "HTML5",
-            "explanation" : "웹 페이지의 구조와 내용을 정의하는 마크업 언어입니다."
+            "explanation" : "HTML에 대한 깊은 이해를 바탕으로 웹페이지의 구조를 효과적으로 설계하며, 시맨틱 마크업을 통해 사용자 친화적이고 접근성이 높은 사이트를 만들 수 있습니다."
         }, 
         {
             "name" : "CSS3",
-            "explanation" : "웹 페이지의 디자인, 레이아웃, 스타일을 정의하는 언어입니다."
+            "explanation" : "반응형 디자인을 구현할 수 있으며, 애니메이션과 트랜지션 등 다양한 효과를 통해 사용자 경험을 향상시키는 UI를 제작하는 데 능숙합니다."
         }, 
         {
             "name" : "JavaScript",
-            "explanation" : "웹 페이지를 동적으로 제어하고 상호 작용을 가능하게 하는 프로그래밍 언어입니다."
+            "explanation" : "JavaScript를 이용해 동적인 웹페이지를 구현하는 데 능숙하며, 비동기 처리, 이벤트 핸들링 등을 통해 사용자와 상호작용하는 기능을 개발할 수 있습니다."
         }, 
         {
             "name" : "React",
-            "explanation" : "사용자 인터페이스를 만들기 위한 JavaScript 라이브러리입니다."
+            "explanation" : "React에 대한 깊은 이해와 경험을 바탕으로, 컴포넌트 기반의 UI 개발과 상태 관리를 능숙하게 수행할 수 있습니다. 또한, 최신 React 기능인 Hooks를 활용한 개발에도 익숙합니다."
         }, 
         {
             "name" : "TailwindCSS",
-            "explanation" : "클래스 기반의 스타일링 프레임워크입니다."
-        }, 
-        {
-            "name" : "Github",
-            "explanation" : " 소프트웨어 개발자들이 버전 관리와 협업을 할 수 있는 플랫폼입니다."
-        }, 
-        {
-            "name" : "Figma",
-            "explanation" : "웹 기반의 협업 디자인 툴입니다."
-        }, 
-        {
-            "name" : "Node.js",
-            "explanation" : "비동기적인 이벤트 처리를 갖추어 빠르고 확장 가능한 네트워크 애플리케이션을 만들 수 있게 해줍니다."
-        }, 
-        {
-            "name" : "SCSS",
-            "explanation" : "스타일을 보다 효율적으로 작성할 수 있는 CSS 전처리기 언어입니다."
+            "explanation" : "Tailwind CSS를 이용한 반응형 웹 디자인과 유틸리티 기반의 스타일링에 능숙합니다."
         }, 
         {
             "name" : "Styled-Component",
             "explanation" : "React 애플리케이션에서 컴포넌트 단위로 스타일을 정의하고 적용하는 라이브러리입니다."
         },
         {
+            "name" : "SCSS",
+            "explanation" : "컴포넌트 기반의 스타일링을 구현하는 데 능숙합니다. 동적으로 변화하는 스타일을 적용하거나, 테마를 통해 일관된 디자인 시스템을 관리할 수 있습니다."
+        }, 
+        {
+            "name" : "Figma",
+            "explanation" : "사용자 경험을 최우선으로 생각하며, 사용자 중심의 UI/UX 디자인을 구현할 수 있습니다."
+        }, 
+        {
+            "name" : "Github",
+            "explanation" : "깃허브를 통한 버전 관리 및 협업에 능숙하며, 이를 통해 효율적인 코드 리뷰와 팀원 간의 원활한 소통을 진행할 수 있습니다."
+        }, 
+        {
+            "name" : "Node.js",
+            "explanation" : "Node.js에 대해 기본적인 이해를 가지고 있으며, 간단한 서버 구축과 API 작성에 대한 경험이 있습니다."
+        }, 
+        {
             "name" : "MongoDB",
-            "explanation" : "NoSQL 데이터베이스로, 데이터 저장 및 관리를 제공하는 데이터베이스 시스템입니다."
+            "explanation" : "MongoDB에 대한 기본적인 이해를 가지고 있습니다. 간단한 데이터베이스 생성과 데이터 조작에 대한 경험이 있습니다."
         }, 
         {
             "name" : "Firebase",
-            "explanation" : "실시간 데이터베이스, 인증, 호스팅 등 다양한 기능을 제공해주는 서비스입니다."
+            "explanation" : "Firebase에 대한 기본적인 이해를 가지고 있습니다. 간단한 데이터베이스 관리와 인증 기능에 대한 경험이 있습니다."
         }, 
         {
             "name" : "TypeScript",
-            "explanation" : "JavaScript에 정적 타입을 추가하여 코드의 안정성과 가독성을 높이는 것을 목표로 합니다."
+            "explanation" : "기본적인 타입 정의와 인터페이스, 제네릭 등의 사용에 익숙하며, 타입스크립트를 활용한 간단한 코딩 경험도 있습니다. "
         }, 
         {
             "name" : "Next.js",
-            "explanation" : "React 기반의 SSR(서버사이드 렌더링) 및 정적 사이트 생성을 지원하는 웹 프레임워크입니다."
+            "explanation" : "Next.js에 대해 어느 정도 이해하고 있습니다. 서버 사이드 렌더링(SSR)과 정적 사이트 생성(Static Site Generation, SSG) 등의 기능에 대한 기본적인 이해가 있으며, 간단한 웹사이트 제작에 활용해본 경험이 있습니다."
         }
     ]
     

@@ -66,7 +66,7 @@ function Skills({domRef, themeColor, theme}) {
         }, 
         {
             "name" : "Next.js",
-            "explanation" : "Next.js에 대해 어느 정도 이해하고 있습니다. 서버 사이드 렌더링(SSR)과 정적 사이트 생성(Static Site Generation, SSG) 등의 기능에 대한 기본적인 이해가 있으며, 간단한 웹사이트 제작에 활용해본 경험이 있습니다."
+            "explanation" : "Next.js에 대해 어느 정도 이해하고 있습니다. 서버 사이드 렌더링(SSR)과 정적 사이트 생성(Static Site Generation, SSG) 등의 기능에 대한 기본적인 이해가 있으며, 간단한 게시판 제작에 활용해본 경험이 있습니다."
         }
     ]
     

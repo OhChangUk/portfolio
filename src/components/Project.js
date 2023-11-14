@@ -23,7 +23,7 @@ function Project({domRef, themeColor, theme}) {
             "github" : "https://github.com/OhChangUk/parcel",
             "site" : "https://parcel-eight-hazel.vercel.app/",
             "Contribution" : "100%",
-            "skill" : "Typescript, TailwindCSS",
+            "skill" : "React, Typescript, TailwindCSS",
             "img" : "project5.png"
         },
         {

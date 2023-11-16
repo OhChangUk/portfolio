@@ -19,21 +19,30 @@ function Portfolio() {
         "bg" : "bg-orange-50",
         "mobileNav" : "bg-orange-100",
         "buttonBg" : "bg-orange-400",
+        "theme" : "bg-orange-500",
+        "hoverTheme" : "hover:bg-orange-600",
         "hover" : "hover:text-orange-300",
+        "hoverBg" : "hover:bg-orange-200",
         "img" : "./../images/main.jpg"
     },
     "green":{
         "bg" : "bg-green-50",
         "mobileNav" : "bg-green-100",
         "buttonBg" : "bg-green-400",
+        "theme" : "bg-green-500",
+        "hoverTheme" : "hover:bg-green-600",
         "hover" : "hover:text-green-300",
+        "hoverBg" : "hover:bg-green-200",
         "img" : "./../images/main1.jpg"
     },
     "blue":{
         "bg" : "bg-blue-50",
         "mobileNav" : "bg-blue-100",
         "buttonBg" : "bg-blue-400",
+        "theme" : "bg-blue-500",
+        "hoverTheme" : "hover:bg-blue-600",
         "hover" : "hover:text-blue-300",
+        "hoverBg" : "hover:bg-blue-200",
         "img" : "./../images/main2.jpg"
     }
 }

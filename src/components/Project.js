@@ -112,8 +112,8 @@ function Project({domRef, themeColor, theme}) {
                                                 <p className="">기여도 : {e.Contribution}</p>
                                                 <p>기술 스택 : {e.skill}</p>
                                                 <div className="flex mt-1 justify-around">
-                                                    <NavLink to={e.github} target='_blank' className="py-1 basis-[40%] border border-[#ddd] bg-white rounded-md">Github</NavLink>
-                                                    <NavLink to={e.site} target='_blank' className="py-1 basis-[40%] border border-[#ddd] bg-white rounded-md">Site</NavLink>
+                                                    <NavLink to={e.github} target='_blank' className={`${themeColor[theme].hoverBg} py-1 basis-[40%] border bg-white border-[#ddd] rounded-md`}>Github</NavLink>
+                                                    <NavLink to={e.site} target='_blank' className={`${themeColor[theme].hoverBg} py-1 basis-[40%] border bg-white border-[#ddd] rounded-md`}>Site</NavLink>
                                                 </div>
                                             </div>
                                     </div>
@@ -124,8 +124,8 @@ function Project({domRef, themeColor, theme}) {
                                         <p className="">기여도 : {e.Contribution}</p>
                                         <p>기술 스택 : {e.skill}</p>
                                         <div className="flex w-[60%] mx-auto mt-1 justify-around">
-                                            <NavLink to={e.github} target='_blank' className="py-1 basis-[40%] bg-white rounded-md border border-[#ddd]">Github</NavLink>
-                                            <NavLink to={e.site} target='_blank' className="py-1 basis-[40%] bg-white rounded-md border border-[#ddd]">Site</NavLink>
+                                            <NavLink to={e.github} target='_blank' className={`${themeColor[theme].hoverBg} py-1 basis-[40%] bg-white rounded-md border border-[#ddd]`}>Github</NavLink>
+                                            <NavLink to={e.site} target='_blank' className={`${themeColor[theme].hoverBg} py-1 basis-[40%] bg-white rounded-md border border-[#ddd]`}>Site</NavLink>
                                         </div>
                                     </div>
                                 </div>

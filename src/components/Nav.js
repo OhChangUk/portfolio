@@ -49,17 +49,17 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef, themeColor, bu
                             )
                         })
                     }
-                    <div className='flex gap-x-2 items-center text-base'>
+                    <div className='flex items-center text-base'>
                         <p>테마 색상 : </p>
-                        <select onChange={(e) => setTheme(e.target.value)} className='outline-none border-[2px] border-black rounded-md'>
-                            {buttons.map((e, i) => {
-                                return (
-                                    <option key={i} value={e.theme}>
-                                        {e.name}
-                                    </option>
-                                );
-                            })}
-                        </select>
+                        <div className="flex justify-around w-24">
+                            {
+                                buttons.map((e,i)=>{
+                                    return(
+                                        <div className={`${themeColor[e.theme].theme} ${themeColor[e.theme].hoverTheme} w-6 h-6 rounded-full cursor-pointer`} key={i} onClick={() => setTheme(e.theme)}></div>
+                                    )
+                                })
+                            }
+                        </div>
                     </div>
                 </div>
                 
@@ -84,21 +84,22 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef, themeColor, bu
                         {
                             list.map((e,i)=>{
                                 return(
-                                    <li onClick={()=>{NavClick(e.ref)}} key={i} className='my-8'>{e.title}</li>
+                                    <li onClick={()=>{NavClick(e.ref)}} key={i} className={`${themeColor[theme].hover} my-8 cursor-pointer`}>{e.title}</li>
                                 )
                             })
                         }
                         <li className='flex gap-x-2 items-center my-8 text-base'>
                             <p>테마 색상 : </p>
-                            <select onChange={(e) => setTheme(e.target.value)} className='outline-none border-[2px] border-black rounded-md py-1'>
-                                {buttons.map((e, i) => {
-                                    return (
-                                        <option key={i} value={e.theme}>
-                                            {e.name}
-                                        </option>
-                                    );
-                                })}
-                            </select>
+                            <div className="flex justify-around w-24">
+                                {
+                                    buttons.map((e,i)=>{;
+                                        return(
+                                            <div className={`${themeColor[e.theme].theme} ${themeColor[e.theme].hoverTheme} w-6 h-6 rounded-full cursor-pointer`} key={i} onClick={() => setTheme(e.theme)}></div>
+                                        )
+                                    })
+                                }
+                            </div>
+                            
                         </li>
                     </ul>
                 </div>

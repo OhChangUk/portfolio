@@ -95,7 +95,7 @@ function Skills({domRef, themeColor, theme}) {
                             }
                         }}
                         autoplay={{
-                            delay : 3000,
+                            delay : 1000,
                             disableOnInteraction: false
                         }}
                         loop={true}

@@ -47,9 +47,6 @@ ul, ol{list-style: none;}
     }
   }
 
-.select {
-  text-align-last: center;
-}
 
 .custom-animation {
   animation: bounceInRotate 1s;

@@ -90,7 +90,7 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef, themeColor, bu
                         }
                         <li className='flex gap-x-2 items-center my-8 text-base'>
                             <p>테마 색상 : </p>
-                            <select onChange={(e) => setTheme(e.target.value)} className='outline-none border-[2px] border-black rounded-md'>
+                            <select onChange={(e) => setTheme(e.target.value)} className='outline-none border-[2px] border-black rounded-md py-1'>
                                 {buttons.map((e, i) => {
                                     return (
                                         <option key={i} value={e.theme}>

@@ -90,7 +90,7 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef, themeColor, bu
                         }
                         <li className='flex gap-x-2 items-center my-8 text-base'>
                             <p>테마 색상 : </p>
-                            <div className="flex justify-around w-24">
+                            <div className="flex justify-around w-32">
                                 {
                                     buttons.map((e,i)=>{;
                                         return(

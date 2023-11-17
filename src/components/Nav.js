@@ -51,7 +51,7 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef, themeColor, bu
                     }
                     <div className='flex items-center text-base'>
                         <p>테마 색상 : </p>
-                        <div className="flex justify-around w-24">
+                        <div className="flex justify-around w-32">
                             {
                                 buttons.map((e,i)=>{
                                     return(

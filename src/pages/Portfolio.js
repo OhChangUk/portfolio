@@ -44,12 +44,23 @@ function Portfolio() {
         "hover" : "hover:text-blue-300",
         "hoverBg" : "hover:bg-blue-200",
         "img" : "./../images/main2.jpg"
-    }
+    },
+    "pink":{
+      "bg" : "bg-pink-50",
+      "mobileNav" : "bg-pink-100",
+      "buttonBg" : "bg-pink-400",
+      "theme" : "bg-pink-500",
+      "hoverTheme" : "hover:bg-pink-600",
+      "hover" : "hover:text-pink-300",
+      "hoverBg" : "hover:bg-pink-200",
+      "img" : "./../images/main3.jpg"
+  }
 }
   const buttons = [
       {name: "오렌지", theme: "orange"},
       {name: "그린", theme: "green"},
-      {name: "블루", theme: "blue"}
+      {name: "블루", theme: "blue"},
+      {name: "핑크", theme: "pink"}
   ]
 
   const scrollToComponent = (ref) => {

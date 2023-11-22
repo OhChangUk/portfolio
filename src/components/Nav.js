@@ -49,17 +49,14 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef, themeColor, bu
                             )
                         })
                     }
-                    <div className='flex items-center text-base'>
-                        <p>테마 색상 : </p>
-                        <div className="flex justify-around w-32">
-                            {
-                                buttons.map((e,i)=>{
-                                    return(
-                                        <div className={`${themeColor[e.theme].theme} ${themeColor[e.theme].hoverTheme} w-6 h-6 rounded-full cursor-pointer`} key={i} onClick={() => setTheme(e.theme)}></div>
-                                    )
-                                })
-                            }
-                        </div>
+                    <div className='flex items-center justify-between text-base w-32'>
+                        {
+                            buttons.map((e,i)=>{
+                                return(
+                                    <div className={`${themeColor[e.theme].theme} ${themeColor[e.theme].hoverTheme} w-6 h-6 rounded-full cursor-pointer`} key={i} onClick={() => setTheme(e.theme)}></div>
+                                )
+                            })
+                        }
                     </div>
                 </div>
                 
@@ -88,18 +85,14 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef, themeColor, bu
                                 )
                             })
                         }
-                        <li className='flex gap-x-2 items-center my-8 text-base'>
-                            <p>테마 색상 : </p>
-                            <div className="flex justify-around w-32">
-                                {
-                                    buttons.map((e,i)=>{;
-                                        return(
-                                            <div className={`${themeColor[e.theme].theme} ${themeColor[e.theme].hoverTheme} w-6 h-6 rounded-full cursor-pointer`} key={i} onClick={() => setTheme(e.theme)}></div>
-                                        )
-                                    })
-                                }
-                            </div>
-                            
+                        <li className='flex gap-x-2 items-center justify-between my-8 text-base w-32'>
+                            {
+                                buttons.map((e,i)=>{;
+                                    return(
+                                        <div className={`${themeColor[e.theme].theme} ${themeColor[e.theme].hoverTheme} w-6 h-6 rounded-full cursor-pointer`} key={i} onClick={() => setTheme(e.theme)}></div>
+                                    )
+                                })
+                            }
                         </li>
                     </ul>
                 </div>

@@ -32,7 +32,7 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef, themeColor, bu
         setNav(false)
     }
 
-    
+    const [checkTheme, setCheckTheme] = useState(null);
     
   return (
     <>
@@ -53,7 +53,7 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef, themeColor, bu
                         {
                             buttons.map((e,i)=>{
                                 return(
-                                    <div className={`${themeColor[e.theme].theme} ${themeColor[e.theme].hoverTheme} w-6 h-6 rounded-full cursor-pointer`} key={i} onClick={() => setTheme(e.theme)}></div>
+                                    <div className={`${themeColor[e.theme].theme} ${themeColor[e.theme].hoverTheme} w-6 h-6 rounded-full cursor-pointer p-3 ${checkTheme === e.theme ? `border-[3px] ${themeColor[e.theme].chkTheme}` : ''}`} key={i} onClick={() => { setTheme(e.theme); setCheckTheme(e.theme); }}></div>
                                 )
                             })
                         }
@@ -89,7 +89,7 @@ function Nav({scrollToComponent, AboutRef, SkillsRef, ProjectRef, themeColor, bu
                             {
                                 buttons.map((e,i)=>{;
                                     return(
-                                        <div className={`${themeColor[e.theme].theme} ${themeColor[e.theme].hoverTheme} w-6 h-6 rounded-full cursor-pointer`} key={i} onClick={() => setTheme(e.theme)}></div>
+                                        <div className={`${themeColor[e.theme].theme} ${themeColor[e.theme].hoverTheme} w-6 h-6 rounded-full cursor-pointer ${checkTheme === e.theme ? `border-[3px] ${themeColor[e.theme].chkTheme}` : ''}`} key={i} onClick={() => { setTheme(e.theme); setCheckTheme(e.theme); }}></div>
                                     )
                                 })
                             }

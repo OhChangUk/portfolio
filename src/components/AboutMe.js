@@ -54,7 +54,7 @@ function AboutMe({domRef, themeColor, theme}) {
                       <br />React를 활용한 프론트엔드 개발자 양성
                       <br />(SPA 프로젝트 개발)
                       <br />2018.03 ~ 2022.02
-                      <br />대구보건대학교(호텔외식조리).
+                      <br />대구보건대학교(호텔외식조리)
                     </p>
                   </li>
                 </ul>

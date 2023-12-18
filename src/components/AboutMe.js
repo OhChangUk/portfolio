@@ -27,11 +27,11 @@ function AboutMe({domRef, themeColor, theme}) {
               </p>
               <div className={`${themeColor[theme].about} border-[3px] rounded-lg py-7 mt-3 justify-around basis-full hidden lg:flex `}>
                 <ul className='gap-y-4 flex flex-col basis-[43%]'>
-                  <li className='flex gap-x-2'>
+                  <li className='flex gap-x-2 items-center'>
                     <FontAwesomeIcon icon={faCake} className='lg:text-xl text-center' />
                     <p className=''>1999.07.27</p>
                   </li>
-                  <li className='flex gap-x-2'>
+                  <li className='flex gap-x-2 items-center'>
                     <FontAwesomeIcon icon={faHome} className='lg:text-xl' />
                     <p className=''>경상북도 구미시</p>
                   </li>
@@ -40,14 +40,14 @@ function AboutMe({domRef, themeColor, theme}) {
                     <p className=''>o2556@naver.com</p>
                     <FontAwesomeIcon icon={faCopy} onClick={()=>{copyEmail("o2556@naver.com")}} className='cursor-pointer' />
                   </li>
-                  <li className='flex gap-x-2'>
+                  <li className='flex gap-x-2 items-center'>
                     <FontAwesomeIcon icon={faCar} className='lg:text-xl' />
                     <p className=''>운전면허 1종 보통</p>
                   </li>
                 </ul>
                 <ul className='flex flex-col basis-[43%] leading-9'>
                   <li className='flex gap-x-2'>
-                    <FontAwesomeIcon icon={faGraduationCap} className='lg:text-xl' />
+                    <FontAwesomeIcon icon={faGraduationCap} className='lg:text-xl pt-2' />
                     <p className=''>
                       2023.06 ~ 2023.11
                       <br />그린컴퓨터아트학원 900H
@@ -64,27 +64,27 @@ function AboutMe({domRef, themeColor, theme}) {
         </div>
         <div className={`${themeColor[theme].about} border-[3px] rounded-lg  py-10 mt-5 justify-around basis-full flex flex-wrap lg:hidden gap-y-4`}>
           <ul className='gap-y-4 flex flex-col md:basis-[43%] basis-[95%]'>
-            <li className='flex gap-x-2'>
-              <FontAwesomeIcon icon={faCake} className='lg:text-xl text-center' />
+            <li className='flex gap-x-2 items-center'>
+              <FontAwesomeIcon icon={faCake} className='text-xl text-center' />
               <p className=''>1999.07.27</p>
             </li>
-            <li className='flex gap-x-2'>
-              <FontAwesomeIcon icon={faHome} className='lg:text-xl' />
+            <li className='flex gap-x-2 items-center'>
+              <FontAwesomeIcon icon={faHome} className='text-xl' />
               <p className=''>경상북도 구미시</p>
             </li>
             <li className='flex gap-x-2 items-center'>
-              <FontAwesomeIcon icon={faEnvelope} className='lg:text-xl' />
+              <FontAwesomeIcon icon={faEnvelope} className='text-xl' />
               <p className=''>o2556@naver.com</p>
               <FontAwesomeIcon icon={faCopy} onClick={()=>{copyEmail("o2556@naver.com")}} className='cursor-pointer' />
             </li>
-            <li className='flex gap-x-2'>
-              <FontAwesomeIcon icon={faCar} className='lg:text-xl' />
+            <li className='flex gap-x-2 items-center'>
+              <FontAwesomeIcon icon={faCar} className='text-xl' />
               <p className=''>운전면허 1종 보통</p>
             </li>
           </ul>
           <ul className='flex flex-col md:basis-[43%] basis-[95%] leading-9'>
             <li className='flex gap-x-2'>
-              <FontAwesomeIcon icon={faGraduationCap} className='lg:text-xl' />
+              <FontAwesomeIcon icon={faGraduationCap} className='text-xl pt-2' />
               <p className=''>
                 2023.06 ~ 2023.11
                 <br />그린컴퓨터아트학원 900H

@@ -21,6 +21,7 @@ function Portfolio() {
         "buttonBg" : "bg-orange-400",
         "hoverBtn" : "hover:bg-orange-500",
         "theme" : "bg-orange-500",
+        "about" : "border-orange-200",
         "chkTheme" : "border-orange-700",
         "hoverTheme" : "hover:bg-orange-600",
         "hover" : "hover:text-orange-300",
@@ -33,6 +34,7 @@ function Portfolio() {
         "buttonBg" : "bg-green-400",
         "hoverBtn" : "hover:bg-green-500",
         "theme" : "bg-green-500",
+        "about" : "border-green-200",
         "chkTheme" : "border-green-700",
         "hoverTheme" : "hover:bg-green-600",
         "hover" : "hover:text-green-300",
@@ -45,6 +47,7 @@ function Portfolio() {
         "buttonBg" : "bg-blue-400",
         "hoverBtn" : "hover:bg-blue-500",
         "theme" : "bg-blue-500",
+        "about" : "border-blue-200",
         "chkTheme" : "border-blue-700",
         "hoverTheme" : "hover:bg-blue-600",
         "hover" : "hover:text-blue-300",
@@ -57,6 +60,7 @@ function Portfolio() {
       "buttonBg" : "bg-pink-400",
       "hoverBtn" : "hover:bg-pink-500",
       "theme" : "bg-pink-500",
+      "about" : "border-pink-200",
       "chkTheme" : "border-pink-700",
       "hoverTheme" : "hover:bg-pink-600",
       "hover" : "hover:text-pink-300",
@@ -79,7 +83,7 @@ function Portfolio() {
     <>
         <Nav scrollToComponent={scrollToComponent} HeaderRef={HeaderRef} AboutRef={AboutRef} SkillsRef={SkillsRef} ProjectRef={ProjectRef} themeColor={themeColor} buttons={buttons} theme={theme} setTheme={setTheme}  />
         <Header themeColor={themeColor} theme={theme} />
-        <AboutMe domRef={AboutRef} />
+        <AboutMe domRef={AboutRef} themeColor={themeColor} theme={theme} />
         <Skills domRef={SkillsRef} themeColor={themeColor} theme={theme} />
         <Project domRef={ProjectRef} themeColor={themeColor} theme={theme} />
         <Scroll themeColor={themeColor} theme={theme} />

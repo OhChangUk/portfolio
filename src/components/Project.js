@@ -9,7 +9,7 @@ function Project({domRef, themeColor, theme}) {
         {
             "project" : "Oh-! ChangUk",
             "type" : "포트폴리오",
-            "project_period" : "2023.10.19 ~ 진행 중",
+            "project_period" : "2023.10.19 ~ 2023.11.07",
             "github" : "https://github.com/OhChangUk/portfolio",
             "site" : "https://changuk-portfolio.vercel.app/",
             "Contribution" : "100%",

@@ -14,7 +14,17 @@ function Project({domRef, themeColor, theme}) {
             "site" : "https://changuk-portfolio.vercel.app/",
             "Contribution" : "100%",
             "skill" : "React, TailwindCSS",
-            "img" : "project6.png"
+            "img" : "project8.png"
+        },
+        {
+            "project" : "오늘의 운세",
+            "type" : "개인 프로젝트",
+            "project_period" : "2023.11.03 ~ 2023.11.06",
+            "github" : "https://github.com/OhChangUk/taro",
+            "site" : "https://taro-eight.vercel.app/",
+            "Contribution" : "100%",
+            "skill" : "Next.js, TailwindCSS",
+            "img" : "project7.png"
         },
         {
             "project" : "택배 조회",
@@ -24,6 +34,16 @@ function Project({domRef, themeColor, theme}) {
             "site" : "https://parcel-eight-hazel.vercel.app/",
             "Contribution" : "100%",
             "skill" : "React, Typescript, TailwindCSS",
+            "img" : "project6.png"
+        },
+        {
+            "project" : "페스티벌",
+            "type" : "개인 프로젝트",
+            "project_period" : "2023.09.05 ~ 2023.09.11",
+            "github" : "https://github.com/OhChangUk/festival",
+            "site" : "https://festival-iljk.vercel.app/",
+            "Contribution" : "100%",
+            "skill" : "React, styled-components",
             "img" : "project5.png"
         },
         {
